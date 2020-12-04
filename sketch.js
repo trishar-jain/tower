@@ -119,6 +119,13 @@ function draw() {
 function mouseDragged(){
   Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
 }
+
+function keyPressed(){
+  if(keyCode===32){
+    slingShot.attach(this.ball);
+  }
+}
+
 function mouseReleased(){
   slingShot.fly();
 }
